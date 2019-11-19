@@ -174,7 +174,7 @@ public class SnellController implements Initializable{
 					Tempresult = (Double.parseDouble(Tempn1)*Math.sin(Double.parseDouble(Angle)))/Math.sin(90);
 					result = "n2 = " + String.valueOf(Tempresult);
 				}else if(Angle.isEmpty()&& !Tempn2.isEmpty()&& !Tempn1.isEmpty()) {
-					Tempresult = Math.asin((Double.parseDouble(Tempn2)*Math.sin(90))/Double.parseDouble(Tempn1));
+					Tempresult = Math.toDegrees(Math.asin((Double.parseDouble(Tempn2)*Math.sin(Math.toRadians(90)))/Double.parseDouble(Tempn1)));
 					result = "angle = " +String.valueOf(Tempresult);
 				}else if(Angle.isEmpty() && Tempn2.isEmpty() && Tempn1.isEmpty()) {
 					result = "Parameters empty";

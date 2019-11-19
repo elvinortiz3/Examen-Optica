@@ -176,7 +176,7 @@ public class CriticalController implements Initializable{
 					Tempresult = Double.parseDouble(TempN2) / Math.sin(Double.parseDouble(Angle));
 					result = "n1 = " + String.valueOf(Tempresult);
 				}else if(Angle.isEmpty()&& !TempN1.isEmpty()&& !TempN2.isEmpty()) {
-					Tempresult = Math.sin(Double.parseDouble(TempN2)/Double.parseDouble(TempN1));
+					Tempresult = Math.toDegrees(Math.asin(Double.parseDouble(TempN2)/Double.parseDouble(TempN1)));
 					result = "Angle = " +String.valueOf(Tempresult);
 				}else if(Angle.isEmpty() && TempN1.isEmpty() && TempN2.isEmpty()) {
 					result = "Parameters empty";

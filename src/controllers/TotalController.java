@@ -172,7 +172,7 @@ public class TotalController implements Initializable{
 					result = "n1 = " + String.valueOf(Tempresult);
 				}
 				else if(Tempn2.isEmpty() && !Tempr.isEmpty() && !Tempn1.isEmpty() && !Tempi.isEmpty()) {
-					Tempresult = (Math.sin(Double.parseDouble(Tempi))/Math.sin(Double.parseDouble(Tempr)))*Math.sin(Double.parseDouble(Tempn1));
+					Tempresult = (Math.sin(Math.toRadians(Double.parseDouble(Tempi)))/Math.sin(Math.toRadians(Double.parseDouble(Tempr))))*Math.sin(Math.toRadians(Double.parseDouble(Tempn1)));
 					result = "n2 = " + String.valueOf(Tempresult);
 				}else if(Tempr.isEmpty()&& !Tempn2.isEmpty()&& !Tempn1.isEmpty() && !Tempi.isEmpty()) {
 					Tempresult = Math.asin((Math.sin(Double.parseDouble(Tempi))/Double.parseDouble(Tempn2))*Math.sin(Double.parseDouble(Tempn1)));
